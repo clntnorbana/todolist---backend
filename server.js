@@ -27,10 +27,12 @@ mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
-    app.listen(PORT, () => {
-      console.log(`connected to database & listening on port ${PORT}`);
-    });
+    console.log("connected to dabase");
   })
   .catch((error) => {
     console.log(error);
   });
+
+app.listen(PORT, () => {
+  console.log(`listening on port ${PORT}`);
+});
