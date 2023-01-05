@@ -17,8 +17,7 @@ app.use((req, res, next) => {
 });
 
 // routers
-const url = "https://clntn-todolist-api.onrender.com";
-app.use(`${url}/api/todos`, todoRoute);
+app.use("/api/todos", todoRoute);
 
 // PORT
 const PORT = process.env.PORT || 4000;
